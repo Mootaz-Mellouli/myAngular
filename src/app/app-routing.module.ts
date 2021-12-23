@@ -12,7 +12,9 @@ const routes : Routes = [
   {path: 'about', component: AboutComponent},
   {path:'contact', component:ContactComponent},
   {path:'',component:HomeComponent},
-  { path: 'cart', loadChildren: () => import('./cart/cart.module').then(m => m.CartModule) }
+
+  { path: 'cart', loadChildren: () => import('./cart/cart.module').then(m => m.CartModule) },
+  {path:'**',component:NotfoundComponent}
 ] ;
 
 @NgModule({
